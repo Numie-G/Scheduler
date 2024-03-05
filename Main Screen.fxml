@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pack.Controller">
+   <children>
+      <AnchorPane fx:id="AP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1045.0" prefWidth="1396.0">
+         <children>
+            <Label fx:id="schedulerLabel" layoutX="409.0" layoutY="74.0" text="New Client">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <TableView fx:id="table" fixedCellSize="0.0" layoutX="108.0" layoutY="480.0" prefHeight="481.0" prefWidth="1181.0">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="196.0" text="Client Name" />
+                  <TableColumn fx:id="ageColumn" text="Age" />
+                  <TableColumn fx:id="heightColumn" text="Height" />
+                  <TableColumn fx:id="weightColumn" text="Weight" />
+                  <TableColumn fx:id="numberColumn" prefWidth="166.0" text="Contact Number" />
+                  <TableColumn fx:id="emailColumn" prefWidth="166.0" text="Email" />
+                  <TableColumn fx:id="descColumn" prefWidth="134.0" text="Description" />
+                  <TableColumn fx:id="aptColumn" prefWidth="149.0" text="Next Appointment Date" />
+                  <TableColumn fx:id="timeColumn" minWidth="0.0" prefWidth="129.0" text="Time" />
+              </columns>
+            </TableView>
+            <MenuButton fx:id="filterMenu" layoutX="686.0" layoutY="430.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="69.0" text="Filter" textAlignment="CENTER">
+              <items>
+                  <MenuItem fx:id="allAptMenu" mnemonicParsing="false" onAction="#noFilter" text="All Appointments" />
+                <MenuItem fx:id="todayAptMenu" mnemonicParsing="false" onAction="#filterToday" text="Today Only" />
+                <MenuItem fx:id="weekAptMenu" mnemonicParsing="false" onAction="#filterWeek" text="This Week Only" />
+              </items>
+            </MenuButton>
+            <Label layoutX="140.0" layoutY="129.0" prefHeight="33.0" prefWidth="109.0" text="First Name:">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fNameIn" layoutX="250.0" layoutY="133.0" />
+            <Line endX="633.0" layoutX="209.0" layoutY="73.0" startX="-100.0" />
+            <Line endX="-100.5" endY="326.5" layoutX="209.0" layoutY="85.0" startX="-100.5" startY="-11.5" />
+            <Line endX="633.0" endY="1.0" layoutX="209.0" layoutY="411.0" startX="-100.0" />
+            <Line endX="-100.5" endY="326.5" layoutX="942.0" layoutY="85.0" startX="-100.5" startY="-11.5" />
+            <Label layoutX="377.0" layoutY="174.0" prefHeight="33.0" prefWidth="62.0" text="Age:">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ageIn" layoutX="424.0" layoutY="178.0" />
+            <Label layoutX="592.0" layoutY="174.0" prefHeight="33.0" prefWidth="69.0" text="Height:">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="heightIn" layoutX="661.0" layoutY="178.0" />
+            <Label layoutX="140.0" layoutY="174.0" prefHeight="33.0" prefWidth="79.0" text="Weight:">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="weightIn" layoutX="219.0" layoutY="178.0" />
+            <Label layoutX="141.0" layoutY="217.0" prefHeight="33.0" prefWidth="149.0" text="Phone Number:">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numberIn" layoutX="290.0" layoutY="221.0" />
+            <Label layoutX="467.0" layoutY="217.0" prefHeight="33.0" prefWidth="149.0" text="Email:">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailIn" layoutX="527.0" layoutY="221.0" />
+            <Label layoutX="404.0" layoutY="129.0" prefHeight="33.0" prefWidth="132.0" text="Middle Initial:">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="mNameIn" layoutX="536.0" layoutY="133.0" prefHeight="25.0" prefWidth="28.0" />
+            <Label layoutX="567.0" layoutY="129.0" prefHeight="33.0" prefWidth="109.0" text="Last Name:">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="lNameIn" layoutX="677.0" layoutY="133.0" prefHeight="25.0" prefWidth="132.0" />
+            <Label layoutX="140.0" layoutY="286.0" prefHeight="33.0" prefWidth="213.0" text="Medical Issues/Notes:">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="descIn" layoutX="350.0" layoutY="269.0" prefHeight="66.0" prefWidth="461.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="submitButton" layoutX="456.0" layoutY="344.0" mnemonicParsing="false" onAction="#submit" prefHeight="46.0" prefWidth="94.0" text="Submit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Line endX="307.0" layoutX="974.0" layoutY="74.0" startX="-100.0" />
+            <Line endX="307.0" layoutX="974.0" layoutY="410.0" startX="-100.0" />
+            <Line endX="-100.5" endY="-316.0" layoutX="974.0" layoutY="390.0" startX="-100.5" startY="19.5" />
+            <Line endX="-100.5" endY="-316.0" layoutX="1382.0" layoutY="391.0" startX="-100.5" startY="19.5" />
+            <Label fx:id="schedulerLabel1" layoutX="932.0" layoutY="74.0" text="New Appointment">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="956.0" layoutY="127.0" prefHeight="33.0" prefWidth="243.0" text="Select Client on Chart">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="datePicker" layoutX="991.0" layoutY="201.0" />
+            <Button fx:id="submitAptButton" layoutX="1031.0" layoutY="344.0" mnemonicParsing="false" onAction="#submitApt" prefHeight="46.0" prefWidth="94.0" text="Submit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="timeText" layoutX="1003.0" layoutY="281.0" />
+            <Label fx:id="nameLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="956.0" layoutY="164.0" prefHeight="33.0" prefWidth="243.0" text="Select Date">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameLabel11" alignment="CENTER" contentDisplay="CENTER" layoutX="929.0" layoutY="240.0" prefHeight="33.0" prefWidth="299.0" text="Submit Time (Open 9am - 5pm)">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Button fx:id="createApt" layoutX="602.0" layoutY="967.0" mnemonicParsing="false" onAction="#createApt" prefHeight="46.0" prefWidth="236.0" text="Create/Edit Appointment">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
